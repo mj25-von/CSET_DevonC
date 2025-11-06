@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu Calculator</title>
+</head>
+<body>
+<script>
+// Function to get a valid number from the user
+function getValidNumber(message) {
+  let num;
+  do {
+    num = prompt(message);
+    if (num === null) return null; // allow cancel
+    num = parseFloat(num);
+    if (isNaN(num)) {
+      alert("Invalid input! Please enter a valid number.");
+    }
+  } while (isNaN(num));
+  return num;
+}
+
+// Functions for operations
+function add(a, b) {
+  return a + b;
+}
+function subtract(a, b) {
+  return a - b;
+}
+function multiply(a, b) {
+  return a * b;
+}
+function divide(a, b) {
+  if (b === 0) {
+    alert("Error: Division by zero!");
+    return null;
+  }
+  return a / b;
+}
+
+// Function to perform calculation based on choice
+function performOperation(choice) {
+  let num1 = getValidNumber("Enter first number:");
+  if (num1 === null) return; // user cancelled
+  let num2 = getValidNumber("Enter second number:");
+  if (num2 === null) return; // user cancelled
+
+  let result;
+  switch (choice) {
+    case 1: result = add(num1, num2); break;
+    case 2: result = subtract(num1, num2); break;
+    case 3: result = multiply(num1, num2); break;
+    case 4: result = divide(num1, num2); break;
+  }
+  if (result !== null) {
+    alert("Result: " + result);
+  }
+}
+
+// Main calculator loop
+function calculator() {
+  let choice;
+  do {
+    choice = parseInt(prompt(
+      "Please select an option:\n" +
+      "1. Add\n" +
+      "2. Subtract\n" +
+      "3. Multiply\n" +
+      "4. Divide\n" +
+      "5. Quit"
+    ));
+
+    if (choice >= 1 && choice <= 4) {
+      performOperation(choice);
+    } else if (choice !== 5) {
+      alert("Please select a valid option (1-5).");
+    }
+
+  } while (choice !== 5);
+
+  alert("Calculator closed. Goodbye!");
+}
+
+// Run the calculator
+calculator();
+</script>
+</body>
+</html>

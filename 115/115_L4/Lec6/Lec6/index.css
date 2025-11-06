@@ -1,0 +1,98 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+}
+
+
+.header {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("/Lec6/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e67e22;
+}
+
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  max-width: 800px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-full {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-full:hover {
+  background-color: #cf6d17;
+}
+
+.btn-ghost {
+  border: 2px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn-ghost:hover {
+  background-color: #e67e22;
+  color: #fff;
+}

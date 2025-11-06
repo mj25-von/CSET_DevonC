@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script>
+    function printMultiplicationTables(x, y, a, b) {
+        for (let i = x; i <= y; i++) {
+            for (let j = a; j <= b; j++) {
+                console.log(`${i} x ${j} = ${i * j}`);
+            }
+            console.log("\n");
+        }
+    }
+
+    while (true) {
+        try {
+            let inputX = prompt("Enter x:");
+            let inputY = prompt("Enter y:");
+            let inputA = prompt("Enter a:");
+            let inputB = prompt("Enter b:");
+
+            let x = parseInt(inputX);
+            let y = parseInt(inputY);
+            let a = parseInt(inputA);
+            let b = parseInt(inputB);
+
+            if (isNaN(x) || isNaN(y) || isNaN(a) || isNaN(b)) {
+                throw new Error("Invalid input. Program terminated.");
+            }
+
+            printMultiplicationTables(x, y, a, b);
+        } catch (err) {
+            console.error(err.message);
+            break;
+        }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script>
+function multiplicationTable() {
+  while (true) {
+    
+    let x = prompt("Enter the number for multiplication table (x):");
+    let a = prompt("Enter the starting value (a):");
+    let b = prompt("Enter the ending value (b):");
+
+    
+    x = parseInt(x);
+    a = parseInt(a);
+    b = parseInt(b);
+
+    
+    if (isNaN(x) || isNaN(a) || isNaN(b)) {
+      alert("Error: Invalid input! Program will now end.");
+      break; 
+    }
+
+   
+    let output = `Multiplication table of ${x} from ${a} to ${b}:\n`;
+    for (let i = a; i <= b; i++) {
+      output += `${x} x ${i} = ${x * i}\n`;
+    }
+
+    alert(output); 
+  }
+}
+
+
+multiplicationTable();
+</script>
+</body>
+</html>

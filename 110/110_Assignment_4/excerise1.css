@@ -1,0 +1,57 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+
+.container {
+  width: 90%;         
+  max-width: 1200px;  
+  margin: 0 auto;     
+}
+
+
+.header {
+  background-color: deepskyblue;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  max-width: 1850px;
+}
+
+
+.hero {
+  background-color: red;
+  padding: 80px;
+  text-align: center;
+  color: white;
+}
+
+
+.row {
+  display: flex;
+}
+
+.content {
+  background-color: green;
+  flex: 2;
+  padding: 60px;
+  color: white;
+}
+
+.sidebar {
+  background-color: purple;
+  flex: 1;
+  padding: 60px;
+  color: white;
+}
+
+
+.footer {
+  background-color: gray;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
