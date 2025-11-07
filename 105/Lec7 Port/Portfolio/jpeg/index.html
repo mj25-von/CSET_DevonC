@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devon Crosson | Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark">
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Devon Crosson</h1>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button id="mode-toggle">☀️</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-text">
+            <h2>Hi — I’m Devon.</h2>
+            <p>
+              I’m a beginning software engineering student from Chicago.  
+              I love building PC's and gaming, learning new
+              things, and discovering new music.
+            </p>
+          </div>
+          <div class="hero-img">
+            <img src="/Lec7 Port/Portfolio/jpeg/IMG_E6934.JPG" alt="Devon Crosson" />
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>
+            I’m passionate about learning software development and design.  
+            Right now I’m focused on learning JavaScript, and building
+            projects that show what I can do.
+          </p>
+          <ul class="skills">
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Fast Learner</li>
+          </ul>
+        </div>
+      </section>
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="project-card">
+            <img
+              src="/Lec7 Port/Portfolio/jpeg/project-mockup-example.jpeg"
+              alt="Project mockup"
+            />
+            <div class="project-info">
+         <section class="section projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <p><strong>CV (Resume Website)</strong></p>
+    <p>A responsive resume webpage built with HTML and CSS to showcase education, skills, and career goals.</p>
+    <a href="project1.html" class="btn">View Project</a>
+  </div>
+
+  <div class="project">
+  </div>
+</section>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>
+            You can reach me through my social profiles below.  
+            (Placeholders only — not linked.)
+          </p>
+          <div class="socials">
+            <img src="/Lec7 Port/Portfolio/jpeg/png/github-ico.png" alt="GitHub" />
+            <img src="/Lec7 Port/Portfolio/jpeg/png/linkedin-ico.png" alt="LinkedIn" />
+            <img src="/Lec7 Port/Portfolio/jpeg/png/twitter-ico.png" alt="Twitter" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2025 Devon Crosson</p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("mode-toggle");
+      const body = document.body;
+      toggle.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        toggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+      });
+    </script>
+  </body>
+</html>
